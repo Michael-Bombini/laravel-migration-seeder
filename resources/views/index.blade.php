@@ -9,6 +9,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
+        <style>
+            .cancellato{
+                color: red;
+                font-weight: bold
+            }
+        </style>
+
 </head>
 
 <body>
@@ -38,7 +45,14 @@
                     <td>{{$item["orario_arrivo"]}}</td>
                     <td>{{$item["num_carrozze"]}}</td>
                     <td>{{$item["in_orario"]}}</td>
-                    <td>{{$item["is_cancellato"]}}</td>
+                    <td class="cancellato">@if ($item["is_cancellato"]===1)
+                        CANCELLATO 
+        
+
+             
+
+                        
+                    @endif</td>
                 </tr>
                 @endforeach
              
